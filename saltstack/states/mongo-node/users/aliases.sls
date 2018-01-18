@@ -4,4 +4,4 @@ add_alias_emacsclient:
     - cwd: /home/{{ grains['deescalated_user'] }}
     - runas: {{ grains['deescalated_user'] }}
     - require:
-      - sls: users
+      - sls: mongo-node.users

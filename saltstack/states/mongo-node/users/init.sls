@@ -10,4 +10,4 @@ color_prompt:
     - cwd: /home/{{ grains['deescalated_user'] }}
     - runas: {{ grains['deescalated_user'] }}
     - require:
-      - sls: basebox
+      - sls: mongo-node.basebox

@@ -1,4 +1,4 @@
-{% set saltstates = 'inflation-saltstates-mongo-datanode' %}
+{% set saltstates = 'mongo-node' %}
 
 mongo_add_ppa_keys:
   cmd.run:
@@ -15,7 +15,7 @@ mongo_install:
 mongo_import_conf:
   file.managed:
     - name: /etc/mongod.conf
-    - source: salt://mongo/mongod.conf
+    - source: salt://mongo-node/mongo/mongod.conf
 
 mongo_restart:
   cmd.run:
